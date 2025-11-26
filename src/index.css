@@ -1,0 +1,481 @@
+:root {
+  --text-color: #635c5c;
+  --primary-white: white;
+  --seconday-color: #70D76A;
+  --background-gradient: linear-gradient(to left, #46C0BE, #6DD56F, #46C0BE);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+span{
+  color: var(--seconday-color);
+}
+h2{
+  color: var(--seconday-color);
+}
+
+body {
+  background-color: var(--primary-white);
+  color: var(--text-color);
+}
+
+/* ---------------- NAVBAR ---------------- */
+.navbar {
+  height: 100px;
+  position: sticky;
+  top: 0px;
+  background-color: var(--primary-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  z-index: 1;
+}
+
+.header-btn {
+  color: var(--primary-white);
+  background: var(--background-gradient);
+  border: none;
+  padding: 13px 33px;
+  border-radius: 30px;
+  font-size: 1.1em;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar .nav-links li a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.navbar .nav-links li a:hover {
+  color: var(--seconday-color);
+}
+
+/*  ---------------SERVICE SECTION---------------  */
+/* ---GLOBAL STYLING--- */
+.service-area {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  width: 90%;
+  margin: auto;
+}
+
+.service-1 {
+  flex-grow: 1;
+  max-width: 350px;
+  text-align: center;
+}
+
+.img-box {
+  position: relative;
+  /* overflow: hidden; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.img-box h5 {
+  width: 80%;
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-white);
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.green-bg .img-box h5 {
+  background-color: var(--seconday-color);
+  color: var(--primary-white);
+}
+
+.service-1:hover .img-box img {
+  transform: scale(1.05);
+  transition: 0.4s ease;
+}
+
+/* ------------HERO SECTION OF ALL PAGES------------------ */
+.about-hero {
+  position: relative;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+    url('./Component/images/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 360px;
+  color: var(--primary-white);
+  display: flex;
+  align-items: flex-start;
+  padding: 0px 90px;
+  justify-content: center;
+  background-attachment: fixed;
+  flex-direction: column;
+  background-color: black;
+
+  .hero-links {
+    display: flex;
+    gap: 20px;
+
+    .h-links {
+      color: var(--primary-white);
+      text-decoration: none;
+    }
+  }
+}
+
+/* -------------Support AREA------------------ */
+.Support-wrapper {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .support-intro,
+  .support-img {
+    flex-basis: 50%;
+  }
+  
+
+  .support-img img {
+    width: 100%;
+  }
+
+  .support-intro h1 {
+    font-weight: 400;
+    width: 30vw;
+  }
+  .support-intro h2{
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .support-intro h3 {
+    color: black;
+    font-weight: bolder;
+    font-size: 200px, ;
+    margin-bottom: 60px;
+  }
+}
+
+/* -------------------------FOOTER-------------------------- */
+/*  Main Footer Container */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 60px;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('./Component/images/footer-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--secondary-white);
+  padding: 60px 90px;
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Logo */
+.footer-logo {
+  margin-bottom: 40px;
+}
+
+/* Text */
+.footer-box p {
+  color: var(--primary-white);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/*  Footer Links  */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Link Styling */
+.footer-link {
+  color: var(--primary-white);
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/*  Titles */
+.footer-box h6 {
+  font-size: 22px;
+  margin-bottom: 40px;
+  color: var(--seconday-color);
+  text-decoration: underline;
+  text-underline-offset: 9px;
+}
+
+/* Copyright Section */
+.copywrite {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px 30px;
+  margin-top: 100px;
+  font-size: 16px;
+  color: var(--primary-white);
+}
+i{
+  color: var(--seconday-color);
+  font-size: 20px;
+  margin-right: 20px;
+}
+/*-------------------------  Media Queries ---------------------------*/
+@media (max-width: 480px) {
+  /* Footer */
+   .navbar .header-btn {
+    display: none;
+  }
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .footer {
+    padding: 20px;
+  }
+  .footer-link {
+    font-size: 13px;
+  }
+  .copywrite {
+    font-size: 12px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 0 5%;
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 10vw;
+  }
+  .content p {
+    width: 90%;
+    font-size: 1rem;
+    margin: auto;
+  }
+  .video-box {
+    position: static;
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+  }
+  .dots {
+    right: 10px;
+  }
+  /* all heros */
+.about-hero{
+  background-position:top center;
+}
+  /* Goals Section */
+  .main-goals {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-goals .target-intro h2,
+  .main-goals .target-intro p {
+    width: 100%;
+  }
+  .Support-wrapper{
+    flex-direction: column-reverse;
+  }
+}
+
+/* ===== Small Devices (Phones to Small Tablets, 481px–768px) ===== */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* Footer */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 30px;
+    gap: 15px;
+  }
+  .footer-box {
+    width: 100%;
+    max-width: 350px;
+  }
+  .footer-links {
+    align-items: center;
+  }
+  .footer-link {
+    font-size: 14px;
+  }
+  .copywrite {
+    font-size: 13px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 0 5%;
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 8vw;
+  }
+  .content p {
+    width: 70%;
+    margin: auto;
+  }
+  .video-box {
+    width: 350px;
+    height: 220px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+
+  /* Goals Section */
+  .main-goals {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-goals .target-intro h2,
+  .main-goals .target-intro p {
+    width: 100%;
+  }
+
+  /* Services */
+  .container {
+    gap: 25px;
+  }
+
+  /* Navbar */
+  .navbar .header-btn {
+    display: none;
+  }
+  .navbar .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+   .Support-wrapper{
+    flex-direction: column-reverse;
+  }
+     /* all heros */
+.about-hero{
+  background-position:top center;
+  background-size: contain;
+}
+}
+
+/* ===== Medium Devices (Tablets, 769px–992px) ===== */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Footer */
+  .footer {
+    padding: 30px 40px;
+    gap: 20px;
+  }
+  .footer-box {
+    min-width: 280px;
+  }
+  .footer-link {
+    font-size: 15px;
+  }
+  .copywrite {
+    font-size: 14px;
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 15px 30px;
+  }
+  .navbar .nav-links {
+    gap: 20px;
+    font-size: 16px;
+  }
+ /* all heros */
+.about-hero{
+  background-position:top center;
+}
+  /* Goals Section */
+  .main-goals {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-goals .target-intro h2,
+  .main-goals .target-intro p {
+    width: 100%;
+  }
+}
+
+/* ===== Large Devices (Laptops, 993px–1200px) ===== */
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Footer */
+  .footer {
+    padding: 40px 50px;
+    gap: 25px;
+  }
+  .footer-box {
+    min-width: 300px;
+  }
+  .footer-link {
+    font-size: 16px;
+  }
+  .copywrite {
+    font-size: 15px;
+  }
+
+  /* Navbar */
+  .navbar .nav-links {
+    gap: 10px;
+  }
+  .header-btn {
+    padding: 10px 15px;
+  }
+
+  /* Video Box */
+  .video-box {
+    width: 400px;
+    height: 250px;
+  }
+
+  /* Goals Section */
+  .main-goals .target-intro h2 {
+    width: 40vw;
+  }
+  .main-goals .target-intro p {
+    width: 40vw;
+  }
+}
